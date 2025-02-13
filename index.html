@@ -50,15 +50,40 @@
         .github-link:hover {
             text-decoration: underline;
         }
+        .language-select {
+            margin-bottom: 20px;
+        }
     </style>
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('title').innerText = 'Mavel - Great Developer';
+                document.getElementById('description1').innerText = 'Mavel is a talented developer who creates amazing projects. His code is clean, interfaces are user-friendly, and users are happy.';
+                document.getElementById('description2').innerText = 'If you need a reliable and professional developer – choose Mavel!';
+                document.getElementById('button').innerText = 'Get $1,000,000';
+                document.getElementById('github').innerText = 'Visit GitHub';
+            } else {
+                document.getElementById('title').innerText = 'Mavel - Великий Разработчик';
+                document.getElementById('description1').innerText = 'Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.';
+                document.getElementById('description2').innerText = 'Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!';
+                document.getElementById('button').innerText = 'Получить 1 000 000$';
+                document.getElementById('github').innerText = 'Посетить GitHub';
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Mavel - Великий Разработчик</h1>
-        <p>Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.</p>
-        <p>Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!</p>
-        <a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Получить 1 000 000$</a>
-        <a class="github-link" href="https://github.com/savelchik88" target="_blank">Посетить GitHub</a>
+        <div class="language-select">
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+        <h1 id="title">Mavel - Великий Разработчик</h1>
+        <p id="description1">Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.</p>
+        <p id="description2">Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!</p>
+        <a class="btn" id="button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Получить 1 000 000$</a>
+        <a class="github-link" id="github" href="https://github.com/savelchik88" target="_blank">Посетить GitHub</a>
     </div>
 </body>
 </html>
+
