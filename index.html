@@ -19,6 +19,7 @@
             background-color: #1e1e1e;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            display: none;
         }
         h1 {
             color: #ffcc00;
@@ -32,13 +33,15 @@
             padding: 15px 30px;
             font-size: 20px;
             color: #ffffff;
-            background-color: #ff5733;
+            background-color: #ffcc00;
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
-            background-color: #e74c3c;
+            background-color: #e6b800;
         }
         .github-link {
             margin-top: 20px;
@@ -55,6 +58,11 @@
         }
     </style>
     <script>
+        function selectLanguage(lang) {
+            document.getElementById('language-select').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            changeLanguage(lang);
+        }
         function changeLanguage(lang) {
             if (lang === 'en') {
                 document.getElementById('title').innerText = 'Mavel - Great Developer';
@@ -73,11 +81,12 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <div class="language-select">
-            <button onclick="changeLanguage('ru')">Русский</button>
-            <button onclick="changeLanguage('en')">English</button>
-        </div>
+    <div id="language-select" class="container">
+        <h1>Выберите язык / Select a language</h1>
+        <button class="btn" onclick="selectLanguage('ru')">Русский</button>
+        <button class="btn" onclick="selectLanguage('en')">English</button>
+    </div>
+    <div id="content" class="container">
         <h1 id="title">Mavel - Великий Разработчик</h1>
         <p id="description1">Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.</p>
         <p id="description2">Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!</p>
@@ -86,4 +95,3 @@
     </div>
 </body>
 </html>
-
