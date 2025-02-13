@@ -1,223 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mavely - The Best</title>
+    <title>Mavel - Великий Разработчик</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://wallpaperaccess.com/full/1905476.jpg') no-repeat center center fixed;
-            background-size: cover;
+            font-family: Arial, sans-serif;
             text-align: center;
-            color: white;
-            animation: fadeIn 2s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+            padding: 50px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-            width: 70%;
-            max-width: 800px;
-            text-align: center;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
-
         h1 {
-            font-size: 60px;
-            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
-            margin-bottom: 20px;
+            color: #ffcc00;
         }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        p {
+            font-size: 18px;
         }
-
-        li {
-            font-size: 20px;
-            margin: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px;
-            border-radius: 10px;
+        .btn {
             display: inline-block;
-            width: 200px;
-            transition: transform 0.3s, background 0.3s;
-            cursor: pointer;
-        }
-
-        li:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        .anime-button, .guest-button {
-            margin-top: 30px;
-            padding: 15px 40px;
-            font-size: 22px;
-            border: none;
-            border-radius: 30px;
-            background: #7a00ff;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s, background 0.3s;
-            box-shadow: 0px 0px 15px rgba(122, 0, 255, 0.7);
-        }
-
-        .anime-button:hover, .guest-button:hover {
-            transform: scale(1.1);
-            background: #5400b8;
-        }
-
-        .quote {
-            font-size: 20px;
             margin-top: 20px;
-            font-style: italic;
-            color: #ffeb3b;
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 18px;
-        }
-
-        .login-container {
-            margin-top: 30px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            width: 100%;
-            max-width: 400px;
-            text-align: left;
-            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: none;
-            font-size: 18px;
-            background: rgba(255, 255, 255, 0.3);
-            color: #333;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 15px;
+            padding: 15px 30px;
             font-size: 20px;
-            background: #7a00ff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.3s;
+            color: #ffffff;
+            background-color: #ff5733;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
         }
-
-        .login-container button:hover {
-            background: #5400b8;
-        }
-
-        .login-container p {
-            margin-top: 10px;
-            font-size: 18px;
+        .btn:hover {
+            background-color: #e74c3c;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mavely</h1>
-        <p>The best person ever! Here are some great qualities:</p>
-        <ul>
-            <li onclick="addEmoji(this)">Good</li>
-            <li onclick="addEmoji(this)">Beautiful</li>
-            <li onclick="addEmoji(this)">Smart</li>
-            <li onclick="addEmoji(this)">Kind</li>
-            <li onclick="addEmoji(this)">Creative 🎨</li>
-            <li onclick="addEmoji(this)">Strong</li>
-            <li onclick="addEmoji(this)">Funny</li>
-            <li onclick="addEmoji(this)">Brave</li>
-        </ul>
-        <button class="anime-button" onclick="rickroll()">Click for a Surprise!</button>
-        <button class="guest-button" onclick="enterGuestMode()">Guest Mode</button>
-        <p class="quote" id="animeQuote"></p>
-        
-        <!-- Login Form -->
-        <div class="login-container" id="loginForm">
-            <h3>Login</h3>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="checkLogin()">Login</button>
-            <p id="loginMessage"></p>
-        </div>
+        <h1>Mavel - Великий Разработчик</h1>
+        <p>Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.</p>
+        <p>Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!</p>
+        <a class="btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Получить 1 000 000$</a>
     </div>
-    <footer>
-        Made with ❤️ by Mavely
-    </footer>
-
-    <script>
-        // Function to redirect to Rickroll video
-        function rickroll() {
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-        }
-
-        // Function to add emoji when clicking the buttons
-        function addEmoji(element) {
-            if (!element.innerText.includes('✨')) {
-                element.innerText += ' ✨';
-            }
-        }
-
-        // Array of anime quotes to display
-        const quotes = [
-            "Power comes in response to a need, not a desire. You have to create that need. - Goku",
-            "A lesson without pain is meaningless. - Edward Elric",
-            "Fear is not evil. It tells you what your weaknesses are. - Gildarts Clive",
-            "A person grows up when he has to. - Jiraiya",
-            "A lesson learned from experience is worth much more than a lesson taught. - Yami Sukehiro"
-        ];
-        
-        // Display a random anime quote
-        document.getElementById("animeQuote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
-
-        // Function to check login credentials
-        function checkLogin() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const loginMessage = document.getElementById('loginMessage');
-            
-            if (username === "s" && password === "sasa") {
-                loginMessage.innerText = "Good job!";
-                loginMessage.style.color = "green";
-            } else {
-                loginMessage.innerText = "Invalid credentials.";
-                loginMessage.style.color = "red";
-            }
-        }
-
-        // Guest mode button function
-        function enterGuestMode() {
-            alert("Welcome to the Guest Mode! Enjoy the site.");
-        }
-    </script>
 </body>
 </html>
