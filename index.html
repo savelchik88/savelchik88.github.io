@@ -19,7 +19,6 @@
             background-color: #1e1e1e;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-            display: none;
         }
         h1 {
             color: #ffcc00;
@@ -78,6 +77,9 @@
                 document.getElementById('github').innerText = 'Посетить GitHub';
             }
         }
+        window.onload = function() {
+            document.getElementById('content').style.display = 'none';
+        };
     </script>
 </head>
 <body>
@@ -86,7 +88,7 @@
         <button class="btn" onclick="selectLanguage('ru')">Русский</button>
         <button class="btn" onclick="selectLanguage('en')">English</button>
     </div>
-    <div id="content" class="container">
+    <div id="content" class="container" style="display: none;">
         <h1 id="title">Mavel - Великий Разработчик</h1>
         <p id="description1">Mavel – это талантливый разработчик, который создаёт потрясающие проекты. Его код чист, интерфейсы удобны, а пользователи довольны.</p>
         <p id="description2">Если вам нужен надёжный и профессиональный разработчик – выбирайте Mavel!</p>
