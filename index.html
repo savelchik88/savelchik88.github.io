@@ -16,18 +16,31 @@
         <p id="error-message" class="error"></p>
     </div>
 
-    <div id="content-container" class="container" style="display: none;">
-        <h2>Добро пожаловать!</h2>
-        <p>Здесь вы можете оставить сообщение или прикрепить файл.</p>
+    <div id="content-savas" class="container" style="display: none;">
+        <h2>Добро пожаловать, Savas! (Личный профиль)</h2>
+        <p>Здесь ваши личные файлы и сообщения.</p>
         
-        <textarea placeholder="Ваше сообщение..."></textarea>
+        <textarea placeholder="Ваше личное сообщение..."></textarea>
         <input type="file" id="file-upload">
+        <button id="send-savas" class="send-button">Отправить</button>
         
         <hr>
         
         <h3>Информация о системе</h3>
-        <p>Ваш IP-адрес: <span id="ip-info">[Здесь нужен сервер]</span></p>
-        <p>Последний вход: <span id="login-info">[Здесь нужен сервер]</span></p>
+        <p>Ваш IP-адрес: <span id="ip-info">[Нужен сервер]</span></p>
+        <p>Последний вход: <span id="login-info">[Нужен сервер]</span></p>
+    </div>
+
+    <div id="content-inko" class="container" style="display: none;">
+        <h2>Добро пожаловать! (Публичный профиль)</h2>
+        <p>Здесь вы можете оставить публичное сообщение.</p>
+        
+        <textarea placeholder="Ваше публичное сообщение..."></textarea>
+        <button id="send-inko" class="send-button">Отправить</button>
+        
+        <p style="font-size: 14px; margin-top: 20px;">
+            (Сообщения, оставленные здесь, будут видны другим гостям. Ваши личные файлы в безопасности).
+        </p>
     </div>
 
     <script src="script.js"></script>
