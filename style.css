@@ -1,58 +1,47 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0fff0; /* Очень светлый зелено-салатовый фон */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Элементы входа
+    const loginButton = document.getElementById("login-button");
+    const passwordInput = document.getElementById("password-input");
+    const loginContainer = document.getElementById("login-container");
+    const errorMessage = document.getElementById("error-message");
 
-.container {
-    background-color: #ffffff; /* Белый фон для блоков */
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
-}
+    // Новые контейнеры для профилей
+    const contentSavas = document.getElementById("content-savas");
+    const contentInko = document.getElementById("content-inko");
 
-h2 {
-    color: #2e8b57; /* Темно-зеленый (SeaGreen) для заголовков */
-}
+    // Новые кнопки "Отправить"
+    const sendSavas = document.getElementById("send-savas");
+    const sendInko = document.getElementById("send-inko");
 
-input[type="password"],
-input[type="file"],
-textarea {
-    width: 90%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
-textarea {
-    height: 80px;
-    resize: vertical;
-}
+    // ГЛАВНАЯ ЛОГИКА ВХОДА
+    loginButton.addEventListener("click", function() {
+        const password = passwordInput.value;
 
-button {
-    background-color: #32cd32; /* Яркий зеленый (LimeGreen) для кнопки */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-}
+        // 1. Проверяем, ввел ли 'savas'
+        if (password === "savas") {
+            loginContainer.style.display = "none"; // Прячем вход
+            contentSavas.style.display = "block";  // Показываем профиль Savas
+            errorMessage.textContent = "";
 
-button:hover {
-    background-color: #28a745; /* Более темный зеленый при наведении */
-}
+        // 2. Проверяем, ввел ли 'inko' (как ты и просил)
+        } else if (password === "inko") {
+            loginContainer.style.display = "none"; // Прячем вход
+            contentInko.style.display = "block";   // Показываем профиль Inko
+            errorMessage.textContent = "";
 
-.error {
-    color: red;
-    font-size: 14px;
-    height: 20px;
-}
+        // 3. Если пароль неверный
+        } else {
+            errorMessage.textContent = "Неверный пароль!";
+        }
+    });
+
+    // Добавим "заглушку" на кнопки "Отправить"
+    function showServerAlert() {
+        alert("Сообщение не отправлено! Для этого нужен сервер (бэкенд).");
+    }
+
+    sendSavas.addEventListener("click", showServerAlert);
+    sendInko.addEventListener("click", showServerAlert);
+});
