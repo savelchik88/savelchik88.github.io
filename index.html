@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сервис</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container" class="container">
+        <h2>Вход в систему</h2>
+        <p>Пожалуйста, введите пароль для доступа:</p>
+        <input type="password" id="password-input" placeholder="Password">
+        <button id="login-button">Войти</button>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <div id="content-container" class="container" style="display: none;">
+        <h2>Добро пожаловать!</h2>
+        <p>Здесь вы можете оставить сообщение или прикрепить файл.</p>
+        
+        <textarea placeholder="Ваше сообщение..."></textarea>
+        <input type="file" id="file-upload">
+        
+        <hr>
+        
+        <h3>Информация о системе</h3>
+        <p>Ваш IP-адрес: <span id="ip-info">[Здесь нужен сервер]</span></p>
+        <p>Последний вход: <span id="login-info">[Здесь нужен сервер]</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
